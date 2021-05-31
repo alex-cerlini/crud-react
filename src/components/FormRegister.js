@@ -26,7 +26,7 @@ const FormRegister = (props) => {
   }
 
   return (
-    <form autoComplete="off" submit={handleFormSubmit} >
+    <form autoComplete="off" onSubmit={handleFormSubmit} >
 
       <div className="form-group input-group">
         <div className="input-group-prepend">
