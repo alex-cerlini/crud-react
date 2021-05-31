@@ -12,11 +12,11 @@ const FormRegister = (props) => {
   let [values, setValues] = useState(initialFieldsValues)
 
   const handleInputChange = e => {
-    let { fullName, value } = e.target
+    let { name, value } = e.target
 
     setValues({
       ...values,
-      [fullName]: value
+      [name]: value
     })
   }
 
@@ -56,6 +56,7 @@ const FormRegister = (props) => {
         placeholder="Número de telefone"
         name="phoneNumber"
         value={values.phoneNumber}
+        onChange={handleInputChange}
         />
       </div>
 
@@ -71,6 +72,7 @@ const FormRegister = (props) => {
         placeholder="Coloque seu e-mail"
         name="email"
         value={values.email}
+        onChange={handleInputChange}
         />
       </div>
 
@@ -86,6 +88,15 @@ const FormRegister = (props) => {
         placeholder="Data de Nascimento"
         name="email"
         value={values.birthDate}
+        onChange={handleInputChange}
+        />
+      </div>
+
+      <div className="form-group">
+        <input
+          type="submit"
+          value="Salvar"
+          className="btn btn-primary btn-block"
         />
       </div>
 
