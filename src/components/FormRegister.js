@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const FormRegister = () => {
 
@@ -8,6 +8,8 @@ const FormRegister = () => {
     email: '',
     birthDate: ''
   }
+
+  let [value, setValues] = useState(initialFieldsValues)
 
   return (
     <h1>FormRegister</h1>
