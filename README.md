@@ -2,7 +2,7 @@
 
 <br />
 
-<p align="center">My first crud in react</p>
+<p align="center">My first CRUD in react</p>
 
 <h4 align="center"> 
 	🚧  Crud-React 🚀 🚧
