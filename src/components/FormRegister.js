@@ -9,10 +9,72 @@ const FormRegister = () => {
     birthDate: ''
   }
 
-  let [value, setValues] = useState(initialFieldsValues)
+  let [values, setValues] = useState(initialFieldsValues)
 
   return (
-    <h1>FormRegister</h1>
+    <form>
+
+      <div className="form-group input-group">
+        <div className="input-group-prepend">
+          <div className="input-group-text">
+            <i className="fas fa-user"></i>
+          </div>
+        </div>
+
+      <input
+        className="form-control"
+        placeholder="Nome Completo"
+        name="fullName"
+        value={values.fullName}
+        />
+      </div>
+
+      <div className="form-group input-group">
+        <div className="input-group-prepend">
+          <div className="input-group-text">
+            <i className="fas fa-phone-alt"></i>
+          </div>
+        </div>
+
+      <input
+        className="form-control"
+        placeholder="Número de telefone"
+        name="phoneNumber"
+        value={values.phoneNumber}
+        />
+      </div>
+
+      <div className="form-group input-group">
+        <div className="input-group-prepend">
+          <div className="input-group-text">
+            <i className="fas fa-envelope"></i>
+          </div>
+        </div>
+
+      <input
+        className="form-control"
+        placeholder="Coloque seu e-mail"
+        name="email"
+        value={values.email}
+        />
+      </div>
+
+      <div className="form-group input-group">
+        <div className="input-group-prepend">
+          <div className="input-group-text">
+            <i className="fas fa-birthday-cake"></i>
+          </div>
+        </div>
+
+      <input
+        className="form-control"
+        placeholder="Data de Nascimento"
+        name="email"
+        value={values.birthDate}
+        />
+      </div>
+
+    </form>
   )
 }
 
