@@ -42,8 +42,18 @@ const Register = () => {
         <div className="col-md-5">
           <FormRegister addEdit={addEdit}/>
         </div>
-        <div>
-          Lista de clientes que serão listados em breve
+        <div className="col-md-7">
+          <table className="table table-borderless table-stripped">
+            <thead className="thead-light">
+              <tr>
+                <th>Nome Completo</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Ações</th>
+              </tr>
+            </thead>
+
+          </table>
         </div>
       </div>
     </div>
