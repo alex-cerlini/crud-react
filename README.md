@@ -2,7 +2,7 @@
 
 <br />
 
-<p align="center">My first CRUD in react</p>
+<p align="center">My first CRUD in ReactJS</p>
 
 <h4 align="center"> 
 	🚧  Crud-React 🚀 🚧
@@ -22,9 +22,9 @@
 ## App Preview
 
 <p>
-<img src="src/printscreen/printscreen1.png" width="200">
-<img src="src/printscreen/printscreen2.png" width="200">
-<img src="src/printscreen/printscreen3.png" width="200">
+<img src="src/printscreen/printscreen1.png" width="250">
+<img src="src/printscreen/printscreen2.png" width="250">
+<img src="src/printscreen/printscreen3.png" width="250">
 </p>
 
 ---
