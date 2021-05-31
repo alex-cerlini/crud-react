@@ -41,6 +41,18 @@ const Register = () => {
     }
   }
 
+  const deleteCliente = key => {
+    if(window.confirm('Confirma a exclusão deste cliente?')){
+      fireDb.child(`clientes/${key}`).remove(
+        error => {
+          if(error){
+            console.log(error)
+          }
+        }
+      )
+    }
+  }
+
   return (
     <div>
       <div className="jumbotron jumbotron-fluid text-center">
@@ -82,7 +94,9 @@ const Register = () => {
                         <i className="fas fa-pencil-alt"></i>
                       </button>
 
-                      <button className="btn btn-danger">
+                      <button
+                      className="btn btn-danger"
+                      onClick={ () => deleteCliente(id) }>
                         <i className="fas fa-trash-alt"></i>
                       </button>
 
