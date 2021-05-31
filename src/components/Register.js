@@ -19,14 +19,26 @@ const Register = () => {
   },[])
 
   const addEdit = obj => {
-    fireDb.child('clientes').push(
-      obj,
-      error => {
-        if(error){
-          console.log(error)
+    if(currentId == ''){
+      console.log(obj)
+      fireDb.child('clientes').push(
+        obj,
+        error => {
+          if(error){
+            console.log(error)
+          }
         }
-      }
-    )
+      )
+    } else {
+      fireDb.child(`clientes/${currentId}`).set(
+        obj,
+        error => {
+          if(error){
+            console.log(error)
+          }
+        }
+      )
+    }
   }
 
   return (
