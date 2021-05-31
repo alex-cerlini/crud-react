@@ -4,6 +4,20 @@ import fireDb from '../database/firebase'
 
 const Register = () => {
 
+  let [dataClientes, setDataClientes] = useState({
+
+  })
+
+  useEffect( () => {
+    fireDb.child('clientes').on('value', dbSnapShot => {
+      if(dbSnapShot.val() != null){
+        setDataClientes({
+          ...dbSnapShot.val()
+        })
+      }
+    })
+  })
+
   const addEdit = obj => {
     fireDb.child('clientes').push(
       obj,
