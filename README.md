@@ -12,7 +12,7 @@
 
 ## Features
 
-- [x] Register Client with Full Name, phone number, email and Birth Date.
+- [x] Register Client with Full Name, phone number, email and birth Date.
 - [x] Render all data from database in firebase
 - [x] Edit button works
 - [x] Delete button works
@@ -22,9 +22,9 @@
 ## App Preview
 
 <p>
-<img src="src/printscreen/printscreen1.png" width="250">
-<img src="src/printscreen/printscreen2.png" width="250">
-<img src="src/printscreen/printscreen3.png" width="250">
+	<img src="src/printscreen/printscreen1.png" width="250">
+	<img src="src/printscreen/printscreen2.png" width="250">
+	<img src="src/printscreen/printscreen3.png" width="250">
 </p>
 
 ---
@@ -36,7 +36,7 @@
 
 ### Pre-requisites
 
-- Setup your [favorite code editor](https://flutter.dev/docs/get-started/editor) (I recommend using [VS Code](https://code.visualstudio.com/))
+- Setup your favorite code editor (I recommend using [VS Code](https://code.visualstudio.com/))
 
 ### Run The Project
 
