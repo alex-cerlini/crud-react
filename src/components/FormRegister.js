@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const FormRegister = () => {
+const FormRegister = (props) => {
 
   const initialFieldsValues = {
     fullName: '',
@@ -22,6 +22,7 @@ const FormRegister = () => {
 
   const handleFormSubmit = e => {
     e.preventDefault()
+    props.addEdit(values)
   }
 
   return (
