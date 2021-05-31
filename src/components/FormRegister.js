@@ -11,8 +11,21 @@ const FormRegister = () => {
 
   let [values, setValues] = useState(initialFieldsValues)
 
+  const handleInputChange = e => {
+    let { fullName, value } = e.target
+
+    setValues({
+      ...values,
+      [fullName]: value
+    })
+  }
+
+  const handleFormSubmit = e => {
+    e.preventDefault()
+  }
+
   return (
-    <form>
+    <form autoComplete="off" submit={handleFormSubmit} >
 
       <div className="form-group input-group">
         <div className="input-group-prepend">
@@ -26,6 +39,7 @@ const FormRegister = () => {
         placeholder="Nome Completo"
         name="fullName"
         value={values.fullName}
+        onChange={handleInputChange}
         />
       </div>
 
