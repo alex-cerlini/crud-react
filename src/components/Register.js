@@ -4,9 +4,7 @@ import fireDb from '../database/firebase'
 
 const Register = () => {
 
-  let [dataClientes, setDataClientes] = useState({
-
-  })
+  let [dataClientes, setDataClientes] = useState({})
 
   useEffect( () => {
     fireDb.child('clientes').on('value', dbSnapShot => {
@@ -60,6 +58,18 @@ const Register = () => {
                     <td>{dataClientes[id].fullName}</td>
                     <td>{dataClientes[id].phoneNumber}</td>
                     <td>{dataClientes[id].email}</td>
+
+                    <td>
+
+                      <button className="btn btn-primary">
+                        <i className="fas fa-pencil-alt"></i>
+                      </button>
+
+                      <button className="btn btn-danger">
+                        <i className="fas fa-trash-alt"></i>
+                      </button>
+
+                    </td>
                   </tr>
                 })
               }
