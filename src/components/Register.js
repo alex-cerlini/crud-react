@@ -16,7 +16,7 @@ const Register = () => {
         })
       }
     })
-  })
+  },[])
 
   const addEdit = obj => {
     fireDb.child('clientes').push(
