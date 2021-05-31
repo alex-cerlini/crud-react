@@ -14,6 +14,8 @@ const Register = () => {
         setDataClientes({
           ...dbSnapShot.val()
         })
+      } else {
+        setDataClientes({})
       }
     })
   },[])
