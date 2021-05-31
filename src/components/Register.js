@@ -53,6 +53,18 @@ const Register = () => {
               </tr>
             </thead>
 
+            <tbody>
+              {
+                Object.keys(dataClientes).map(id => {
+                  return <tr key={id}>
+                    <td>{dataClientes[id].fullName}</td>
+                    <td>{dataClientes[id].phoneNumber}</td>
+                    <td>{dataClientes[id].email}</td>
+                  </tr>
+                })
+              }
+            </tbody>
+
           </table>
         </div>
       </div>
