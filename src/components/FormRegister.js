@@ -107,7 +107,7 @@ const FormRegister = (props) => {
       <div className="form-group">
         <input
           type="submit"
-          value="Salvar"
+          value={ props.currentId == '' ? 'Salvar' : 'Atualizar' }
           className="btn btn-primary btn-block"
         />
       </div>
