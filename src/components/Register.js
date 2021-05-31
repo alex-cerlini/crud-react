@@ -6,6 +6,8 @@ const Register = () => {
 
   let [dataClientes, setDataClientes] = useState({})
 
+  let [currentId, setCurrentId] = useState('')
+
   useEffect( () => {
     fireDb.child('clientes').on('value', dbSnapShot => {
       if(dbSnapShot.val() != null){
@@ -61,7 +63,10 @@ const Register = () => {
 
                     <td>
 
-                      <button className="btn btn-primary">
+                      <button 
+                        className="btn btn-primary"
+                        onClick={ () => {setCurrentId(id)}}
+                      >
                         <i className="fas fa-pencil-alt"></i>
                       </button>
 
