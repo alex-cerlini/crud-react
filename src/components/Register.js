@@ -1,7 +1,20 @@
 import React from 'react'
 import FormRegister from './FormRegister'
+import fireDb from '../database/firebase'
 
 const Register = () => {
+
+  const addEdit = obj => {
+    fireDb.child('clientes').push(
+      obj,
+      error => {
+        if(error){
+          console.log(error)
+        }
+      }
+    )
+  }
+
   return (
     <div>
       <div className="jumbotron jumbotron-fluid text-center">
@@ -13,7 +26,7 @@ const Register = () => {
 
       <div className="row">
         <div className="col-md-5">
-          <FormRegister/>
+          <FormRegister addEdit={addEdit}/>
         </div>
         <div>
           Lista de clientes que serão listados em breve
