@@ -86,7 +86,7 @@ const FormRegister = (props) => {
       <input
         className="form-control"
         placeholder="Data de Nascimento"
-        name="email"
+        name="birthDate"
         value={values.birthDate}
         onChange={handleInputChange}
         />
