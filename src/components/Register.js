@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import FormRegister from './FormRegister'
 import fireDb from '../database/firebase'
 
