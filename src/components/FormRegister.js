@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const FormRegister = (props) => {
 
@@ -10,6 +10,18 @@ const FormRegister = (props) => {
   }
 
   let [values, setValues] = useState(initialFieldsValues)
+
+  useEffect( () => {
+    if(props.currentId == ''){
+      setValues({
+        ...initialFieldsValues
+      })
+    } else {
+      setValues({
+        ...props.dataClientes[props.currentId]
+      })
+    }
+  }, [props.currentId, props.dataClientes])
 
   const handleInputChange = e => {
     let { name, value } = e.target
