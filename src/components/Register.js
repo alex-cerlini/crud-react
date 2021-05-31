@@ -19,7 +19,7 @@ const Register = () => {
   },[])
 
   const addEdit = obj => {
-    if(currentId == ''){
+    if(currentId === ''){
       console.log(obj)
       fireDb.child('clientes').push(
         obj,

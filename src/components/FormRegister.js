@@ -12,7 +12,7 @@ const FormRegister = (props) => {
   let [values, setValues] = useState(initialFieldsValues)
 
   useEffect( () => {
-    if(props.currentId == ''){
+    if(props.currentId === ''){
       setValues({
         ...initialFieldsValues
       })
@@ -107,7 +107,7 @@ const FormRegister = (props) => {
       <div className="form-group">
         <input
           type="submit"
-          value={ props.currentId == '' ? 'Salvar' : 'Atualizar' }
+          value={ props.currentId === '' ? 'Salvar' : 'Atualizar' }
           className="btn btn-primary btn-block"
         />
       </div>
