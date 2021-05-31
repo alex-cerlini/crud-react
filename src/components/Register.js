@@ -40,7 +40,7 @@ const Register = () => {
 
       <div className="row">
         <div className="col-md-5">
-          <FormRegister addEdit={addEdit}/>
+          <FormRegister {...({addEdit, currentId, dataClientes})} />
         </div>
         <div className="col-md-7">
           <table className="table table-borderless table-stripped">
