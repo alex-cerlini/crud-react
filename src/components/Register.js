@@ -90,14 +90,14 @@ const Register = () => {
                     <td>
 
                       <button 
-                        className="btn btn-primary"
+                        className="btn btn-primary action-button"
                         onClick={ () => {setCurrentId(id)}}
                       >
                         <i className="fas fa-pencil-alt"></i>
                       </button>
 
                       <button
-                      className="btn btn-danger"
+                      className="btn btn-danger action-button"
                       onClick={ () => deleteCliente(id) }>
                         <i className="fas fa-trash-alt"></i>
                       </button>
